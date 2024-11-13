@@ -11,7 +11,21 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'translateY(100px)' },
+          '50%': { transform: 'translate(0px)' },
+        },
+         wave: {
+          '0%': { transform: 'rotate(0.0deg)' },
+          
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        
+        
+      }
     },
+    
   },
   plugins: [],
 };

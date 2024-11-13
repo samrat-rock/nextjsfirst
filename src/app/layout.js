@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { CiMail, CiClock1, CiTwitter, CiLinkedin } from "react-icons/ci";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { CiSearch, CiMenuBurger } from "react-icons/ci";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,9 +24,139 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
+        <section className="bg-red-700 text-white  py-3 hidden lg:block">
+          <div className="container mx-auto flex justify-between items-center">
+            <ul className="flex gap-5">
+              <li className="flex items-center gap-2 border-r-2 pe-7 border-white">
+                <CiMail />
+                <span>info@finbiz.com</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CiClock1 />
+                <span>Working: 8.00am - 5.00pm</span>
+              </li>
+            </ul>
+            <ul className="flex gap-5 pr-8">
+              <li>
+                <a href="#about-us">About Us</a>
+              </li>
+              <li>
+                <a href="#contact-us">Contact Us</a>
+              </li>
+              <li className="border-r-2 border-white pe-2">
+                <a href="#news">News</a>
+              </li>
+              <li>
+                <FaFacebookF className="m-1" />
+              </li>
+              <li>
+                <CiTwitter className="m-1" size={20} />
+              </li>
+              <li>
+                <FaInstagram className="m-1" size={20} />
+              </li>
+              <li>
+                <CiLinkedin className="m-1" size={20} />
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <header className="py-14 relative z-10 ">
+  <div className="container mx-auto flex items-center">
+    <div className="mr-12">
+      <img
+        src="https://finbiz-react.netlify.app/assets/images/logo/logo-1.svg"
+        alt="Logo"
+      />
+    </div>
+    <nav className="lg:flex gap-8 pl-32  hidden  ">
+      <div className="relative group">
+        <a href="#" className="text-gray-800 hover:text-red-500">
+          Home
+        </a>
+        <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden group-hover:block z-20">
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">Home 1</a>
+          </li>
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">Home 2</a>
+          </li>
+        </ul>
+      </div>
+      <div className="relative group">
+        <a href="#" className="text-gray-800 hover:text-red-500">
+          Services
+        </a>
+        <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden group-hover:block z-20">
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">Web Development</a>
+          </li>
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">Mobile Development</a>
+          </li>
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">SEO Optimization</a>
+          </li>
+        </ul>
+      </div>
+      <div className="relative group">
+        <a href="#" className="text-gray-800 hover:text-red-500">
+          Pages
+        </a>
+        <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden group-hover:block z-20">
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">About Us</a>
+          </li>
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">Our Team</a>
+          </li>
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <div className="relative group">
+        <a href="#" className="text-gray-800 hover:text-red-500">
+          Blog
+        </a>
+        <ul className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden group-hover:block z-20">
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">Latest News</a>
+          </li>
+          <li className="px-4 py-2 hover:bg-gray-100">
+            <a href="#">Tech Insights</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#" className="text-gray-800 hover:text-red-500">
+        Pricing Plan
+      </a>
+      <a href="#" className="text-gray-800 hover:text-red-500">
+        Contact
+      </a>
+    </nav>
+
+    <div className="pl-60 flex space-x-4">
+      <button className="bg-pink-200 rounded p-3 hover:bg-red-600">
+        <CiSearch size={25} />
+      </button>
+      <button className="bg-red-600 rounded p-3 hover:bg-pink-200">
+        Get Quote
+      </button>
+      <button className="bg-pink-200 rounded p-3 hover:bg-red-600">
+        <CiMenuBurger size={25} />
+      </button>
+    </div>
+  </div>
+</header>
+
         {children}
+
+      
       </body>
     </html>
   );
