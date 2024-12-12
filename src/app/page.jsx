@@ -628,74 +628,79 @@ function Page() {
       </section>
 
       <section>
-        <div className="bg-white py-2 ">
+        <div className="bg-white py-2 relative  ">
           <div className="flex">
-            <div>
+            <div className="absolute -bottom-8 animate-[wave_5s_ease-in-out_infinite]">
               <img
                 src="https://finbiz-react.netlify.app/assets/images/contact/shape/01.png"
                 alt=""
               />
             </div>
-            <div className="lg:flex gap-10 w-[75%]  pl-12">
+            <div className="container mx-auto p-40 lg:flex gap-32">
+              <img src="https://finbiz-react.netlify.app/assets/images/contact/01.jpg" alt="" />
               <div>
-                <img
-                  src="https://finbiz-react.netlify.app/assets/images/contact/01.jpg"
-                  alt=""
-                />
-              </div>
-              <div className=" w-[50%]">
-                <form className="space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
-                      placeholder="Enter your first name"
-                    />
-                  </div>
+              <h3 className="text-red-700">MAKE A APPONITMENT</h3>
+              <p className="text-[30px] font-bold ">Request a free quote</p>
+              <form className="space-y-4">
+        <div>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
+            placeholder="Enter your first name"
+          />
+        </div>
 
-                  <div>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
-                      placeholder="Enter your last name"
-                    />
-                  </div>
+        <div>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
+            placeholder="Enter your last name"
+          />
+        </div>
 
-                  <div>
-                    <textarea
-                      id="businessPlan"
-                      name="businessPlan"
-                      rows="4"
-                      className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
-                      placeholder="Describe your business plan"
-                    ></textarea>
-                  </div>
+        <div>
+          <textarea
+            id="businessPlan"
+            name="businessPlan"
+            rows="4"
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
+            placeholder="Describe your business plan"
+          ></textarea>
+        </div>
 
-                  <div>
-                    <textarea
-                      id="yourTextHere"
-                      name="yourTextHere"
-                      rows="4"
-                      className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
-                      placeholder="Write anything you'd like here"
-                    ></textarea>
-                  </div>
+        <div>
+        
+          <textarea
+            id="yourTextHere"
+            name="yourTextHere"
+            rows="4"
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
+            placeholder="Write anything you'd like here"
+          ></textarea>
+        </div>
 
-                  <div>
-                    <button
-                      type="submit"
-                      className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </form>
+        <div>
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
               </div>
             </div>
+            <div className="absolute -top-9 right-0 animate-[wave_5s_ease-in-out_infinite]">
+              <img
+                src="https://finbiz-react.netlify.app/assets/images/contact/shape/01.png"
+                alt=""
+              />
+            </div>
+            
           </div>
         </div>
       </section>
